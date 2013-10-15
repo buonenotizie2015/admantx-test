@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>ADmantiX test page</title>
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+<script>
+	$(document).ready(function() {
+		var key = '7552376b2d38e155c96b13c9762268bdb20d10ec0a064e728a6422f7751f825e';
+		var sync = yes;
+		var type = 'TXT';
+		var source = '';
+		var withscores = 'yes';
+		var style = 'json';
+		
+		$.ajax({
+			url: "http://93.62.123.17/admin/points/jsonizePoints?callback=?",
+			crossDomain: true,
+			dataType: 'jsonp',
+			success: function(data){
+				initMapMB('MBMmapContainer', data);
+			}
+		});
+		//if(ptdata!=null)
+
+	});
+</script>
+</head>
+<body>
+<h1>ADmantX test page</h1>
+<p>Insert text string and press Submit</p>
+<form>
+	<textarea rows="20" cols="100"></textarea><br/>
+	<input type="submit" value="Submit">
+</body>
+</html>
